@@ -1,0 +1,1 @@
+This is a basic webpage for a gallery of images created with pure CSS, for refreshing and showing my fundamentals.
