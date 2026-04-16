@@ -1,0 +1,65 @@
+@import "variables.css";
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+header {
+    background-color: var(--surface);
+    padding: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin: 20px;
+}
+
+.painting-card {
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    color: black;
+}
+
+.painting {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    position: relative;
+    overflow: hidden;
+}
+
+.painting > div {
+  position: absolute;
+}
+
+.description {
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+}
+.field {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+}
+
+.sky {
+    background-color: skyblue;
+    height: 60%;
+}
