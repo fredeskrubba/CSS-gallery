@@ -57,9 +57,44 @@ header {
     background-color: green;
     height: 100%;
     width: 100%;
+    z-index: 0;
+}
+
+.night-field {
+    background-color: rgb(6, 63, 6);
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 
 .sky {
     background-color: skyblue;
     height: 60%;
+    width: 100%;
+    z-index: 1;
+}
+
+.sun {
+    background-color: yellow;
+    top: 5%;
+    right: 5%;
+}
+
+.moon {
+    top: -5%;
+    box-shadow: 0.8rem 0.8rem 0 0 darkgray;
+    right: 10%;
+}
+.sun, .moon {
+  width: 20%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.night-sky {
+    background-color: #0f172a;
+    height: 60%;
+    width: 100%;
+    z-index: 1;
 }

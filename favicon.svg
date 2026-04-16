@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect x="0" y="0" width="64" height="64" rx="10" fill="#f2ede6"/>
+
+  <!-- Frame -->
+  <rect x="10" y="10" width="44" height="44" rx="4"
+        fill="none"
+        stroke="#b89b6e"
+        stroke-width="2"/>
+
+  <!-- Artwork (sunset style) -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbc2eb"/>
+      <stop offset="100%" stop-color="#a6c1ee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect x="14" y="14" width="36" height="36" rx="2" fill="url(#sky)"/>
+
+  <!-- Sun -->
+  <circle cx="32" cy="28" r="6" fill="#fff3b0"/>
+
+  <!-- Ground -->
+  <rect x="14" y="36" width="36" height="14" fill="#2a2622"/>
+</svg>
