@@ -1,4 +1,8 @@
 @import "variables.css";
+@import "./field.css";
+@import "./flower.css";
+@import "./city.css";
+
 
 body, html {
     margin: 0;
@@ -6,18 +10,11 @@ body, html {
     box-sizing: border-box;
     background-color: var(--bg);
     color: var(--text);
+    max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-}
-
-header {
-    background-color: var(--surface);
-    padding: 40px;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    letter-spacing: 0.05em;
 }
 
 .gallery {
@@ -25,7 +22,8 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     width: 100%;
-    margin: 20px;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .painting-card {
@@ -39,7 +37,9 @@ header {
     aspect-ratio: 16 / 9; 
     position: relative;
     overflow: hidden;
+    
 }
+
 
 .painting > div {
   position: absolute;
@@ -53,48 +53,23 @@ header {
     letter-spacing: 0.1em;
     font-size: 0.75rem;
 }
-.field {
-    background-color: green;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
+
+
+@media (max-width: 768px) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .painting {
+        transform: translateX(-50%) scale(0.7);
+    }
+
 }
 
-.night-field {
-    background-color: rgb(6, 63, 6);
-    height: 100%;
-    width: 100%;
-    z-index: 0;
+@media (max-width: 480px) {
+  .painting {
+    transform: translateX(-50%) scale(0.5);
+  }
 }
 
-.sky {
-    background-color: skyblue;
-    height: 60%;
-    width: 100%;
-    z-index: 1;
-}
-
-.sun {
-    background-color: yellow;
-    top: 5%;
-    right: 5%;
-}
-
-.moon {
-    top: -5%;
-    box-shadow: 0.8rem 0.8rem 0 0 darkgray;
-    right: 10%;
-}
-.sun, .moon {
-  width: 20%;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.night-sky {
-    background-color: #0f172a;
-    height: 60%;
-    width: 100%;
-    z-index: 1;
-}
